@@ -216,3 +216,43 @@ nav {
 }
 
 /*------footer end------*/
+
+/*------page1-----------*/
+.page1 a.highlight{
+    color:#1a8bff;
+}
+.page1 a.highlight:hover{
+    color:#008a75;
+}
+.page1 .pp-tableCell {
+    /*display: table-cell;*/
+    vertical-align: middle;
+    width: -1px;
+    height: 50%;
+    margin-top: 8%;
+}
+.page1 #mars{
+    width:256px;
+    height:256px;
+    border:10px solid #80bfff;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    -o-border-radius:50%;
+    border-radius:50%
+}
+.page1 h1 {
+    font-family: Lato, 'Microsoft YaHei', sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    text-shadow: 1px 2px #80bfff,2px 4px #003266;
+    text-align: center;
+}
+.page1 #subtitle{
+    font-size: 25px;
+    color:#3399ff;
+}
+.page1 h4{
+    font-size:20px;
+}
+
+
