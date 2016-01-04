@@ -120,11 +120,11 @@ nav {
     min-width:320px;
 }
 #wrap{
-    position:relative;
+    /*position:relative;*/
     min-height:100%;
     _height:100%;
-    min-height: 838px;
-    height:auto;
+    min-height: 600px;
+    height:100%;
     width:100%;
     margin-top:77px;
     margin-bottom:40px;
@@ -136,6 +136,7 @@ nav {
     width:100%;
     height:100%;
     text-align:center;
+    padding-bottom:40px;
 }
 .page{
     position:absolute;
@@ -149,10 +150,11 @@ nav {
 .page3,
 .page4,
 .page5,
-.page6{
+.page6,
+.page7{
     background: url(../image/bg6.jpg) top left no-repeat;
     background-size:auto;
-    }
+}
 
 
 /*
@@ -201,23 +203,24 @@ nav {
 /*------warpper ended-----*/
 
 /*------footer start------*/
-.footer{
-    position:fixed;
-    bottom:-40px;
+footer{
+    position:absolute;
+    display:block;
     width:100%;
     height:40px;
     background-color:#f8f8f8;
     border-top:1px solid #ccc;
     box-shadow:10px 0 0 #ccc;
+    bottom:77px;
 }
 
-.footer div{
+footer div{
     text-align: center;
 }
 
 /*------footer end------*/
 
-/*------page1-----------*/
+/*------page1 start-----*/
 .page1 a.highlight{
     color:#1a8bff;
 }
@@ -254,5 +257,519 @@ nav {
 .page1 h4{
     font-size:20px;
 }
+
+/*-------page1 end------*/
+#page2_title{    
+    font-family: Lato, 'Microsoft YaHei', sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    text-shadow: 1px 2px #80bfff,2px 4px #003266;
+    text-align: center;
+}
+.t4 {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-image: linear-gradient(#f9fdff, #d9eaf8);
+    z-index: 11;
+    font-size: 20px;;
+    color: #8da6b8;
+    font-family: Arial;
+    left:50%;
+    margin-left:-90px;
+    margin-top:10px;
+}
+
+.t4 i {
+    font-style: normal
+}
+
+.hour {
+    position: absolute;
+}
+
+.hour3 {
+    right: 5px;
+    top: 50%;
+    margin-top: -7px;
+
+}
+
+.hour6 {
+    left: 50%;
+    bottom: 5px;
+    margin-left: -5px;
+
+}
+
+.hour9 {
+    left: 5px;
+    top: 50%;
+    margin-top: -7px;
+
+}
+
+.hour12 {
+    left: 50%;
+    top: 5px;
+    margin-left: -10px;
+}
+
+#miao, #fen, #shi {
+    position: absolute;
+    left: 50%;
+    height: 180px;
+    width: 10px;
+    margin-left: -5px;
+}
+
+#miao {
+    z-index: 23;
+}
+
+#fen {
+    z-index: 22;
+
+}
+
+#shi {
+    z-index: 21;
+
+}
+#shi:after{
+    content: "";
+    height: 50px;
+    width: 6px;
+    position: absolute;
+    top: 55px;
+    left:2px;
+    background: #1aa9d8;
+    border-radius: 8px 8px 8px 8px;
+    z-index: -1;
+}
+#fen:after{
+    content: "";
+    height: 70px;
+    width: 4px;
+    position: absolute;
+    top: 35px;
+    left:3px;
+    background: #23bcef;
+    border-radius: 8px 8px 8px 8px;
+    z-index: -1;
+}
+#miao:after{
+    content: "";
+    height: 80px;
+    width: 1px;
+    position: absolute;
+    top: 70px;
+    left:4px;
+    background: #0dc1fd;
+    z-index: -1;
+    /*box-shadow: 5px 10px 8px 3px #B2C3D4;*/
+
+}
+
+#point{ position: absolute; left:50%; top: 50%; width: 16px; height:16px; margin-left: -8px; margin-top: -8px; z-index: 999;    border-radius: 50%;  box-shadow: 0px 3px 8px -1px #0f4873;}
+#point:before,#point:after{
+    content: "";
+    height: 10px;
+    width: 10px;
+    position: absolute;
+    top:0%;
+    background: #8ba3b6;
+    border-radius: 50%;
+    z-index: 1; }
+
+#point:before {
+    width: 16px; height:16px;
+}
+#point:after {
+    background: #cee3ec; left: 3px; top:3px;
+}
+
+.demo-text {
+    position: relative;
+    margin-top:10px;
+    height:600px;
+    width:70%;
+    left:50%;
+    margin-left: -35%;
+    display: block;
+    color: #4CB7DA;
+    font-size: 30px;
+    font-family: '微软雅黑';
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.2em;
+    text-align: left;
+}
+
+.demo-text p{
+    text-indent: 2em;
+}
+/*-------page2 start----*/
+
+
+
+
+
+
+/*-------page2 end------*/
+
+/*-------page4 start----*/
+.war-content-w{
+    margin-top:10px;
+    width: 1100px;
+    height: auto;
+    margin: 0 auto;
+}
+.war-content-skill{
+    width: 900px;
+    min-height: 500px;
+    height: 70%;
+    margin-left: 100px;
+}
+.skill_list{
+    height: 20px;
+    background: rgba(255,255,255,0.6);
+    margin: 8px 0;
+    padding: 4px;
+    border-radius: 20px;
+}
+.course{
+    float: left;
+    padding: 0 10px;
+    width: 100px;
+    font-size: 16px;
+    text-align: right;
+    height: 20px;
+    line-height: 20px;
+}
+.courses{
+    height: 20px;
+    border-radius: 20px;
+    line-height: 20px;
+    text-align: center;
+    color: #666;
+}
+
+#HTML{
+    border: 1px solid rgba(255,255,255,0.5);
+    position: relative;
+}
+#HTML::before{
+    content: '80%';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    background-color: rgba(255,255,255,0.5);
+    -webkit-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    -o-transition: all 0.6s;
+    transition: all 0.6s;
+}
+#HTML:hover::before{
+    opacity: 1;
+    width: 100%;
+    background-color:rgb(252, 199, 72);
+    border-radius: 20px;
+}
+
+#CSS{
+    border: 1px solid rgba(255,255,255,0.5);
+    position: relative;
+}
+#CSS::before{
+    content: '80%';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    background-color: rgba(255,255,255,0.5);
+    -webkit-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    -o-transition: all 0.6s;
+    transition: all 0.6s;
+}
+#CSS:hover::before{
+    opacity: 1;
+    width: 100%;
+    background-color:rgb(255, 102, 255);
+    border-radius: 20px;
+}
+
+#JavaScript{
+    border: 1px solid rgba(255,255,255,0.5);
+    position: relative;
+}
+#JavaScript::before{
+    content: '65%';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    background-color: rgba(255,255,255,0.5);
+    -webkit-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    -o-transition: all 0.6s;
+    transition: all 0.6s;
+}
+#JavaScript:hover::before{
+    opacity: 1;
+    width: 100%;
+    background-color:rgb(186, 223, 144);
+    border-radius: 20px;
+}
+
+#JQuery{
+    border: 1px solid rgba(255,255,255,0.5);
+    position: relative;
+}
+#JQuery::before{
+    content: '60%';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    background-color: rgba(255,255,255,0.5);
+    -webkit-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    -o-transition: all 0.6s;
+    transition: all 0.6s;
+}
+#JQuery:hover::before{
+    opacity: 1;
+    width: 100%;
+    background-color:rgb(242, 184, 139);
+    border-radius: 20px;
+}
+
+#Ajax{
+    border: 1px solid rgba(255,255,255,0.5);
+    position: relative;
+}
+#Ajax::before{
+    content: '50%';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    background-color: rgba(255,255,255,0.5);
+    -webkit-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    -o-transition: all 0.6s;
+    transition: all 0.6s;
+}
+#Ajax:hover::before{
+    opacity: 1;
+    width: 100%;
+    background-color:rgb(145, 224, 241);
+    border-radius: 20px;
+}
+
+#HTML5{
+    border: 1px solid rgba(255,255,255,0.5);
+    position: relative;
+}
+#HTML5::before{
+    content: '35%';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    background-color: rgba(255,255,255,0.5);
+    -webkit-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    -o-transition: all 0.6s;
+    transition: all 0.6s;
+}
+#HTML5:hover::before{
+    opacity: 1;
+    width: 100%;
+    background-color:rgb(20, 205, 214);
+    border-radius: 20px;
+}
+
+#CSS3{
+    border: 1px solid rgba(255,255,255,0.5);
+    position: relative;
+}
+#CSS3::before{
+    content: '40%';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    background-color: rgba(255,255,255,0.5);
+    -webkit-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    -o-transition: all 0.6s;
+    transition: all 0.6s;
+}
+#CSS3:hover::before{
+    opacity: 1;
+    width: 100%;
+    background-color:rgb(243, 107, 107);
+    border-radius: 20px;
+}
+
+#PHP{
+    border: 1px solid rgba(255,255,255,0.5);
+    position: relative;
+}
+#PHP::before{
+    content: '60%';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    background-color: rgba(255,255,255,0.5);
+    -webkit-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    -o-transition: all 0.6s;
+    transition: all 0.6s;
+}
+#PHP:hover::before{
+    opacity: 1;
+    width: 100%;
+    background-color:rgb(41, 222, 107);
+    border-radius: 20px;
+}
+
+#SQL{
+    border: 1px solid rgba(255,255,255,0.5);
+    position: relative;
+}
+#SQL::before{
+    content: '40%';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    background-color: rgba(255,255,255,0.5);
+    -webkit-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    -o-transition: all 0.6s;
+    transition: all 0.6s;
+}
+#SQL:hover::before{
+    opacity: 1;
+    width: 100%;
+    background-color:rgb(255, 242, 40);
+    border-radius: 20px;
+}
+
+#JAVA{
+    border: 1px solid rgba(255,255,255,0.5);
+    position: relative;
+}
+#JAVA::before{
+    content: '75%';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    background-color: rgba(255,255,255,0.5);
+    -webkit-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    -o-transition: all 0.6s;
+    transition: all 0.6s;
+}
+#JAVA:hover::before{
+    opacity: 1;
+    width: 100%;
+    background-color:rgb(247, 142, 166);
+    border-radius: 20px;
+}
+
+#C_plus{
+    border: 1px solid rgba(255,255,255,0.5);
+    position: relative;
+}
+#C_plus::before{
+    content: '70%';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    background-color: rgba(255,255,255,0.5);
+    -webkit-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    -o-transition: all 0.6s;
+    transition: all 0.6s;
+}
+#C_plus:hover::before{
+    opacity: 1;
+    width: 100%;
+    background-color:rgb(23, 200, 168);
+    border-radius: 20px;
+}
+
+#Bootstrap{
+    border: 1px solid rgba(255,255,255,0.5);
+    position: relative;
+}
+#Bootstrap::before{
+    content: 'Learning';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    background-color: rgba(255,255,255,0.5);
+    -webkit-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    -o-transition: all 0.6s;
+    transition: all 0.6s;
+}
+#Bootstrap:hover::before{
+    opacity: 1;
+    width: 100%;
+    background-color:rgb(129, 168, 246);
+    border-radius: 20px;
+}
+
+/*------page4 end------*/
+
+/*------page7 start----*/
 
 

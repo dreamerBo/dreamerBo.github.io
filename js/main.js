@@ -61,6 +61,7 @@
         str += '<li id="li4" data-index="'+3+'"></li>';
         str += '<li id="li5" data-index="'+4+'"></li>';
         str += '<li id="li6" data-index="'+5+'"></li>';
+        str += '<li id="li6" data-index="'+6+'"></li>';
 
        
         $('#pageMenu').html(str)

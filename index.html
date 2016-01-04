@@ -7,6 +7,7 @@
 </head>
 
 <link rel="stylesheet" href="./css/main.css" type="text/css">
+<link rel="stylesheet" href="./css/clock.css" type="text/css">
 <body>
 	<header>
 
@@ -35,30 +36,81 @@
                 
         <div id="pages" style="transform-style: preserve-3d; transform: translateZ(-477.5px) rotateX(0deg);">
             <section class="page page1" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; display: none; transform: rotateX(0deg) translateZ(477.5px);">
-            <div>page1</div>
-			<div class="pp-tableCell" style="height:100%">
-                <img id="mars" src="image/mars.png">
-                <h1>Bojue Jiang</h1>
-                <p id="subtitle">A Passionate, Creative, and Devoted</p>
-                <h4>Web Front-End Developer</h4>
-                <p><a href="mailto:mars13901964@hotmail.com" class="highlight">mars13901964@hotmail.com</a></p>
-            </div>
+	            <div>Home, My name is Mars, Here we go!!!</div>
+				<div class="pp-tableCell" >
+	                <img id="mars" src="image/mars.png">
+	                <h1>Bojue Jiang</h1>
+	                <p id="subtitle">A Passionate, Creative, and Devoted</p>
+	                <h4>Web Front-End Developer</h4>
+	                <p><a href="mailto:mars13901964@hotmail.com" class="highlight">mars13901964@hotmail.com</a></p>
+	            </div>
 			
             </section>
             
             <section class="page page2" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; display: none; transform: rotateX(0deg) translateZ(477.5px);">
-            <div>page2</div>
+            	<div class="t4">
+		            <i class="hour hour3">3</i>
+		            <i class="hour hour6">6</i>
+		            <i class="hour hour9">9</i>
+		            <i class="hour hour12">12</i>
 
+		            <div id="miao"></div>
+		            <div id="fen"></div>
+		            <div id="shi"></div>
+		            <div id="point"></div>
+		        </div>
+				<script type="text/javascript">
+				    var miao = document.getElementById("miao");
+				    var fen = document.getElementById("fen");
+				    var shi = document.getElementById("shi");
+
+				    var clock = setInterval(function () {
+				        var nowDate = new Date();//get the current time
+				        var hour = nowDate.getHours();
+				        var minute = nowDate.getMinutes();
+				        var second = nowDate.getSeconds();
+
+				        var circleHour = hour % 12 * 30;
+				        shi.style.transform = "rotate(" + circleHour + "deg)";//change the format to 12-H
+				        fen.style.transform = "rotate(" + minute * 6 + "deg)";
+				        miao.style.transform = "rotate(" + second * 6 + "deg)";
+				    }, 1000);
+				</script>
+
+			<div id="page2_title" class="center" style="font-size: 60px; font-weight:bold; color:blue">PERSONAL STATEMENT</div>
+
+			<div class="center">
+				<h1 id="headline" class="demo-text">
+					<p>I am passionate about designing, maintaining and developing various types of websites. My career objective is to make every pages well organized and follow a good structure, have a great navigation and load fast. As a web developer, I endeavour to focus on the usability and contents of the websites that visitors would feel much easier to use and enough information can be given.</p></h1>
+			</div>
+			
+			<script src='js/shine.min.js'></script>
+			<script src="js/page2.js"></script>	
             </section>
             
             <section class="page page3 js-danmubox" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; display: none; transform: rotateX(0deg) translateZ(477.5px);">
-            <div>page3</div>
-
+	            <div>page3</div>
+				
             </section>
                         
             <section class="page page4 js-danmubox" id="chartbox1" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; display: none; transform: rotateX(0deg) translateZ(477.5px);">
-            <div>page4</div>
-
+	            <div>PROFESSIONS & SKILLS</div>
+	            <div class="war-content-w">
+					<ul id="war-content-skill" class="war-content-skill" style="margin-top: 50px;">
+						<li class="skill_list"><div class="course">HTML:</div><div style="overflow: hidden;"><div id="HTML" class="courses" style="width: 80%; background-color: rgba(252, 199, 72,0.1);">80%</div></div></li>
+						<li class="skill_list"><div class="course">CSS:</div><div style="overflow: hidden;"><div id="CSS" class="courses" style="width: 80%; background-color: rgba(255, 102, 255,0.1);">80%</div></div></li>
+						<li class="skill_list"><div class="course">JavaScript:</div><div style="overflow: hidden;"><div id="JavaScript" class="courses" style="width: 65%; background-color: rgba(186, 223, 144,0.1);">65%</div></div></li>
+						<li class="skill_list"><div class="course">JQuery:</div><div style="overflow: hidden;"><div id="jQuery" class="courses" style="width: 60%; background-color: rgba(242, 184, 139, 0.1);">60%</div></div></li>
+						<li class="skill_list"><div class="course">Ajax:</div><div style="overflow: hidden;"><div id="Ajax" class="courses" style="width: 50%; background-color: rgba(145, 224, 241,0.1);">50%</div></div></li>
+						<li class="skill_list"><div class="course">HTML5:</div><div style="overflow: hidden;"><div id="HTML5" class="courses" style="width: 35%; background-color: rgba(20, 205, 214,0.1);">35%</div></div></li>
+						<li class="skill_list"><div class="course">CSS3:</div><div style="overflow: hidden;"><div id="CSS3" class="courses" style="width: 40%; background-color: rgba(243, 107, 107,0.1);">40%</div></div></li>
+						<li class="skill_list"><div class="course">PHP:</div><div style="overflow: hidden;"><div id="PHP" class="courses" style="width: 60%; background-color: rgba(41, 222, 107,0.1);">60%</div></div></li>
+						<li class="skill_list"><div class="course">SQL:</div><div style="overflow: hidden;"><div id="SQL" class="courses" style="width: 40%; background-color: rgba(255, 242, 40,0.1);">40%</div></div></li>
+						<li class="skill_list"><div class="course">JAVA:</div><div style="overflow: hidden;"><div id="JAVA" class="courses" style="width: 75%; background-color: rgba(247, 142, 166,0.1);">75%</div></div></li>
+						<li class="skill_list"><div class="course">C++:</div><div style="overflow: hidden;"><div id="C_plus" class="courses" style="width: 70%; background-color: rgba(23, 200, 168,0.1);">70%</div></div></li>
+						<li class="skill_list"><div class="course">Bootstrap:</div><div style="overflow: hidden;"><div id="Bootstrap" class="courses" style="width: 100%; background-color: rgba(129, 168, 246,0.1);">10%</div></div></li></ul>
+					<input id="hidden" type="hidden" class="HTML:80%,CSS:80%,JavaScript:70%,jQuery:65%,Ajax:60%,PHP:35%,NodeJs:30%,CSS3:45%,HTML5:45%,MongoDb:30%,MySQL:50%,PhotoShop:65%,">
+				</div>
             </section>
                         
             <section class="page page5 js-danmubox" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; display: none; transform: rotateX(0deg) translateZ(477.5px);">
@@ -69,6 +121,11 @@
             <section class="page page6" id="chartbox2" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; display: none; transform: rotateX(0deg) translateZ(477.5px);">
             <div>page6</div>
 
+            </section>
+
+            <section class="page page7"  style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; display: none; transform: rotateX(0deg) translateZ(477.5px);">
+            <div>page7</div>
+			
             </section>
               
                         
@@ -82,15 +139,17 @@
 	    <li class="" data-index="3"></li>
 	    <li class="" data-index="4"></li>
 	    <li class="" data-index="5"></li>
+	    <li class="" data-index="6"></li>
     </ol>
     
     <script type="text/javascript" src="./js/jquery.js"></script>
 	<script type="text/javascript" src="./js/pageSwitch.js"></script>
 	<script type="text/javascript" src="./js/main.js"></script>
 	
-	<div class="footer">
+	<footer>
 		<div>All Rights Reserved </div>
 		<div>Copyright © 2015 - 2026</div>
+	</footer>
 	</div>
 </body>
 </html>
