@@ -7,7 +7,10 @@
 </head>
 
 <link rel="stylesheet" href="./css/main.css" type="text/css">
-<link rel="stylesheet" href="./css/clock.css" type="text/css">
+<!-- <link rel="stylesheet" href="./css/clock.css" type="text/css"> -->
+
+<script type="text/javascript" src="./js/jquery.js"></script>
+
 <body>
 	<header>
 
@@ -83,14 +86,57 @@
 				<h1 id="headline" class="demo-text">
 					<p>I am passionate about designing, maintaining and developing various types of websites. My career objective is to make every pages well organized and follow a good structure, have a great navigation and load fast. As a web developer, I endeavour to focus on the usability and contents of the websites that visitors would feel much easier to use and enough information can be given.</p></h1>
 			</div>
-			
 			<script src='js/shine.min.js'></script>
 			<script src="js/page2.js"></script>	
             </section>
             
             <section class="page page3 js-danmubox" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; display: none; transform: rotateX(0deg) translateZ(477.5px);">
-	            <div>page3</div>
-				
+	            <div id="page3_title" class="center" style="font-size: 60px; font-weight:bold; color:blue">Main Skills for Front-end Developing</div>
+	            <div>Continuous Learning: Keeping up-to-date and acquiring new skills</div>
+				<div id="skill">
+					<div id="skill_content">
+					
+		                <div class="skill_list_content skill_scale">
+		                    <b></b>
+		                    <div class="skill_icon" id="skill_icon2"><img src="./image/html.png" alt=""></div>
+		                    <div class="skill_name">HTML</div>
+		                    <div class="skill_flag skill_flag_scale"></div>
+		                    <div class="skill_int" id="skill_int2" style="display: block;"><ul><li>A deep understanding of Web standards</li><li>Proven skills in using HTML tags</li><li>Familiar with XML and XHTML</li><li>Good demonstrable knowledge of HTML5</li></ul></div>
+		                </div>
+		                <div class="skill_list_content skill_scale">
+		                    <b></b>
+		                    <div class="skill_icon" id="skill_icon3"><img src="./image/css.png" alt=""></div>
+		                    <div class="skill_name">CSS</div>
+		                    <div class="skill_flag"></div>
+		                    <div class="skill_int" id="skill_int3"><ul><li>Can use new properties of CSS and CSS3 proficiently</li><li>Focus on browser compatibility, familiar with common CSS Hack</li><li>Familiar with Bootstrap framework and source implementation</li><li>Know LESS and Sass</li></ul></div>
+		                </div>
+		                <div class="skill_list_content skill_scale">
+		                    <b></b>
+		                    <div class="skill_icon" id="skill_icon4"><img src="./image/js.png" alt=""></div>
+		                    <div class="skill_name">JavaScript</div>
+		                    <div class="skill_flag"></div>
+		                    <div class="skill_int" id="skill_int4"><ul><li>Familiar with JQuery</li><li>Good understanding of AJAX and familiar with JSON</li><li>Focus on performance optimization of JavaScript</li><li>Constantly learning native JavaScript</li></ul></div>
+		                </div>
+		            </div>
+		        </div>
+				<script src="./js/jquery-1.11.2.min.js"></script>
+				<script type="text/javascript">
+					$(".skill_list_content b").click(function(){
+						$(".skill_int").each(function(){
+							if($(this).is(":visible")){
+								$(this).slideUp(200);
+								$(this).prev().removeClass("skill_flag_scale");
+							}
+						});
+						if($(this).siblings(".skill_int").is(":hidden")){
+							$(this).siblings(".skill_int").slideDown(600);
+							$(this).siblings(".skill_flag").addClass("skill_flag_scale");
+						}else{
+							$(this).siblings(".skill_int").slideUp(200);
+							$(this).siblings(".skill_flag").removeClass("skill_flag_scale");
+						}
+					})
+				</script>
             </section>
                         
             <section class="page page4 js-danmubox" id="chartbox1" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; display: none; transform: rotateX(0deg) translateZ(477.5px);">
@@ -142,7 +188,6 @@
 	    <li class="" data-index="6"></li>
     </ol>
     
-    <script type="text/javascript" src="./js/jquery.js"></script>
 	<script type="text/javascript" src="./js/pageSwitch.js"></script>
 	<script type="text/javascript" src="./js/main.js"></script>
 	

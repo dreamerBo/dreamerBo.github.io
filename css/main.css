@@ -259,6 +259,8 @@ footer div{
 }
 
 /*-------page1 end------*/
+
+/*-------page2 start----*/
 #page2_title{    
     font-family: Lato, 'Microsoft YaHei', sans-serif;
     font-size: 60px;
@@ -410,14 +412,97 @@ footer div{
 .demo-text p{
     text-indent: 2em;
 }
-/*-------page2 start----*/
-
-
-
-
-
-
 /*-------page2 end------*/
+
+/*-------page3 start----*/
+#page3_title{    
+    font-family: Lato, 'Microsoft YaHei', sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    text-shadow: 1px 2px #80bfff,2px 4px #003266;
+    text-align: center;
+}
+#skill{
+    width:800px;
+    position: absolute;
+    left:50%;
+    margin-left:-400px;
+}
+.skill_list_content {
+    float: left;
+    margin: 0 85px;
+    position: relative;
+    height: 400px;
+    visibility: hidden;
+}
+.skill_list_content b {
+    position: absolute;
+    top: 3%;
+    left: -11%;
+    width: 130%;
+    height: 40%;
+    background: #000;
+    opacity: 0;
+    -webkit-transition: opacity .25s ease-in-out;
+    transition: opacity .25s ease-in-out;
+    cursor: pointer;
+}
+.skill_list_content b:hover {
+    opacity: 0.4;
+}
+.skill_icon {
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    margin: 30px auto;
+}
+.skill_name {
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+.skill_flag {
+    margin: 20px auto;
+    width: 20px;
+    height: 20px;
+    background: url(../image/skill_flag.png);
+    -webkit-transition-duration: 1s;
+    transition-duration: 1s;
+}
+.skill_flag_scale {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.skill_int {
+    position: absolute;
+    top: 220px;
+    width: 482px;
+    left: -136px;
+    font-size: 14px;
+    line-height: 20px;
+    display: none;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    background: #c8c8dc;
+}
+.skill_int li {
+    font-size: 12px;
+    padding-left: 15px;
+    margin-left:5px;
+}
+.skill_scale {
+    -webkit-animation: skill_scale 1s;
+    -moz-animation: lskill_scale 1s;
+    -o-animation: skill_scale 1s;
+    animation: skill_scale 1s;
+    visibility: visible;
+}
+.page3 li{
+    list-style: disc;
+}
+
+/*-------page3 end------*/
 
 /*-------page4 start----*/
 .war-content-w{
