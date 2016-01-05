@@ -74,7 +74,7 @@
 				        var second = nowDate.getSeconds();
 
 				        var circleHour = hour % 12 * 30;
-				        shi.style.transform = "rotate(" + circleHour + "deg)";//change the format to 12-H
+				        shi.style.transform = "rotate(" + circleHour + "deg)";//change the format to 12H
 				        fen.style.transform = "rotate(" + minute * 6 + "deg)";
 				        miao.style.transform = "rotate(" + second * 6 + "deg)";
 				    }, 1000);
@@ -119,7 +119,6 @@
 		                </div>
 		            </div>
 		        </div>
-				<script src="./js/jquery-1.11.2.min.js"></script>
 				<script type="text/javascript">
 					$(".skill_list_content b").click(function(){
 						$(".skill_int").each(function(){
@@ -140,7 +139,7 @@
             </section>
                         
             <section class="page page4 js-danmubox" id="chartbox1" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; display: none; transform: rotateX(0deg) translateZ(477.5px);">
-	            <div>PROFESSIONS & SKILLS</div>
+            	<div id="page4_title" class="center" style="font-size: 60px; font-weight:bold; color:blue">PROFESSIONS & SKILLS</div>
 	            <div class="war-content-w">
 					<ul id="war-content-skill" class="war-content-skill" style="margin-top: 50px;">
 						<li class="skill_list"><div class="course">HTML:</div><div style="overflow: hidden;"><div id="HTML" class="courses" style="width: 80%; background-color: rgba(252, 199, 72,0.1);">80%</div></div></li>
@@ -160,12 +159,75 @@
             </section>
                         
             <section class="page page5 js-danmubox" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; display: none; transform: rotateX(0deg) translateZ(477.5px);">
-            <div>page5</div>
-
+            	<div id="page5_title" class="center" style="font-size: 60px; font-weight:bold; color:blue">Experience</div>
+				<div class="container" style="width:500px; height:500px; overflow-y:scroll">				
+					<section class="ac-container">
+						<div>
+							<input id="ac-1" name="accordion-1" type="checkbox" />
+							<label for="ac-1">Web Developer and Sales (Jun 2014 ~ Present)</label>
+							<article class="ac-small">
+								<ul>
+									<li>Maintained our IT related shopping-mall websites</li>
+									<li>Identified and resolved website issues</li>
+									<li>Assisted in ongoing development</li>
+									<li>Served over 50 customers daily in fast paced environment</li>
+								</ul>
+							</article>
+						</div>
+						<div>
+							<input id="ac-2" name="accordion-1" type="checkbox" />
+							<label for="ac-2">Web Developer (Dec 2011 ~ Present Leisure Time)</label>
+							<article class="ac-medium">
+								<ul>
+									<li>Designed and planned Several websites</li>
+									<li>Used Html/CSS/Javascript for the front end development</li>
+									<li>Used MySQL/PHP for back end</li>
+									<li>Analysed the feedback data</li>
+									<li>Troubleshoot the cross-platform faulty</li>
+								</ul>
+							</article>
+						</div>
+						<div>
+							<input id="ac-3" name="accordion-1" type="checkbox" />
+							<label for="ac-3">Takeaway Restaurant Manager (Feb 2012 ~ May 2014)</label>
+							<article class="ac-large">
+								<ul>
+									<li>Daily routine management</li>
+									<li>Record-keeping</li>
+									<li>Supply control</li>
+									<li>Took orders</li>
+									<li>Services</li>
+									<li>Trained new staffs</li>
+								</ul>
+							</article>
+						</div>
+						<div>
+							<input id="ac-4" name="accordion-1" type="checkbox" />
+							<label for="ac-4">Software Engineer (Jul 2010 ~ Nov 2011)</label>
+							<article class="ac-large">
+								<ul>
+									<li>Developed and programed software relevant to finance using Java, J2EE and MYSQL</li>
+									<li>Maintained, modified and enhanced the system according to different customers’ demands</li>
+									<li>Wrote the System Manual Guideline</li>
+								</ul>
+							</article>
+						</div>
+					</section>
+		        </div>
             </section>
                         
             <section class="page page6" id="chartbox2" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; display: none; transform: rotateX(0deg) translateZ(477.5px);">
-            <div>page6</div>
+            <div id="page6_title" class="center" style="font-size: 60px; font-weight:bold; color:blue">EDUCATION AND TRAINING</div>
+            <div class="wall-of-buttons">
+			    <div id="button_1" class="large green button">EDUCATION</div>
+			    <div id="button_2" class="large blue button">Bachelor of Software Engineering -- 2006~2010</div>
+			    <div id="button_3" class="large magenta button">Cisco Certified Network Associate (CCNA) -- Jun 2014</div>
+			    <div id="button_4" class="large red button">I'm Glowing!</div>  		
+			    <div id="button_5" class="large orange button">Call to Action</div>
+			    <div id="button_6" class="large orangellow button">TRAINING</div>
+	    		
+
+		    </div>
 
             </section>
 
