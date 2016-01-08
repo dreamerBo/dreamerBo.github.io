@@ -23,12 +23,12 @@
 		</div>
 		<nav>
 			<ul id="navMenu" class="nav-menu">
-				<li class="active" data-index="0"><a href="">111</a></li>
-			    <li class="" data-index="1"><a href="">222</a></li>
-			    <li class="" data-index="2"><a href="">111</a></li>
-			    <li class="" data-index="3"><a href="">111</a></li>
-			    <li class="" data-index="4"><a href="">111</a></li>
-			    <li class="" data-index="5"><a href="">111</a></li>
+				<li class="active" data-index="0"><a href="">HOME</a></li>
+			    <li class="" data-index="1"><a href="#">111</a></li>
+			    <li class="" data-index="2"><a href="#">111</a></li>
+			    <li class="" data-index="3"><a href="#">111</a></li>
+			    <li class="" data-index="4"><a href="#">111</a></li>
+			    <li class="" data-index="5"><a href="#">111</a></li>
 			</ul>
 		</nav>
 
@@ -220,10 +220,10 @@
             <div id="page6_title" class="center" style="font-size: 60px; font-weight:bold; color:blue">EDUCATION AND TRAINING</div>
             <div class="wall-of-buttons">
 			    <div id="button_1" class="large green button">EDUCATION</div>
-			    <div id="button_2" class="large blue button">Bachelor of Software Engineering -- 2006~2010</div>
-			    <div id="button_3" class="large magenta button">Cisco Certified Network Associate (CCNA) -- Jun 2014</div>
-			    <div id="button_4" class="large red button">I'm Glowing!</div>  		
-			    <div id="button_5" class="large orange button">Call to Action</div>
+			    <div id="button_2" class="large blue button">Bachelor of Software Engineering <br/>-- 2006~2010</div>
+			    <div id="button_3" class="large magenta button">Cisco Certified Network Associate (CCNA) <br/>-- Jun 2014</div>
+			    <div id="button_4" class="large red button">ICT20313 Certificate II in Telecommunications Cabling <br/>-- Nov 2015</div>  		
+			    <div id="button_5" class="large orange button">ICA40311 Certificate IV in Web-Based Technologies <br/>-- Dec 2015</div>
 			    <div id="button_6" class="large orangellow button">TRAINING</div>
 	    		
 
@@ -232,8 +232,66 @@
             </section>
 
             <section class="page page7"  style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; display: none; transform: rotateX(0deg) translateZ(477.5px);">
-            <div>page7</div>
-			
+            <div id="page7_title" class="center" style="font-size: 60px; font-weight:bold; color:blue">CONTACT ME</div>
+			<div id="page7">
+			    <div class="intro">
+			        <p style="text-align:center;">
+			            <span id="inspiration">inspiration</span>
+			            <span id="code">code</span>
+			            <span id="dream">dream</span>
+			            <span id="future">future</span>
+			        </p>
+			    </div>
+			    
+
+			    <div class="list" id="ol">
+			        <span class="content"><p>H</p></span>
+			        <span class="content"><p>I</p></span>
+			        <span class="content"><p>R</p></span>
+			        <span class="content"><p>E</p></span>
+			        <span class="content"><p></p></span>
+			        <span class="content"><p></p></span>
+			        <span class="content"><p>M</p></span>
+			        <span class="content"><p>E</p></span>
+			    </div>
+			    
+			    <form class="contact_form">
+			        <div><span>contact number: </span><input style="text" value="0404243208" disabled="disabled"> <br/></div>
+			        <div><span>email address: </span><span><a href="mailto:mars13901964@hotmail.com" class="highlight">mars13901964@hotmail.com</a></span></div>
+			        <div><p style="color:blue;">Emails or Messages preferred as I might not available to answer phone calls during business hours, thanks.</p></div>
+			        <div><a href="">Back to Home</a> <br/></div>
+			        <div><a href="#">Download My Resume</a></div>
+			    </form>
+			</div>
+			<script type="text/javascript">
+				$(document).ready(function(){
+
+				    var oL=document.getElementById('ol');
+				    var oSpan=oL.getElementsByTagName('span');
+				    for(var i=0;i<oSpan.length;i++){
+				        oSpan[i].onmouseover=function() {
+				            this.style.backgroundColor = '#'+changeColor();
+				            this.style.webkitBoxShadow='#ccc 1px 2px 3px';
+				            this.style.cursor='pointer';
+
+				        }
+				        oSpan[i].onmouseout=function(){
+				            this.style.backgroundColor='#'+changeColor();
+				        }
+				    }
+				    
+				    //随机颜色选取；
+				    function changeColor(){
+				        var r = parseInt(Math.random() * 255);
+				        var g = parseInt(Math.random() * 255);
+				        var b = parseInt(Math.random() * 255);
+				        return colorHex = r.toString(16) + g.toString(16) + b.toString(16);
+
+				    }
+
+
+				});
+			</script>
             </section>
               
                         
