@@ -13,7 +13,11 @@ body {
     font-size:14px;
     line-height:1.4;
     -webkit-user-select:none; /* forbid select */
+    -moz-user-select:none;
+    -o-user-select:none;
     -webkit-touch-callout:none; /* forbid callout */
+    -moz-touch-callout:none;
+    -o-touch-callout:none;
 }
 
 /*------header start-------*/
@@ -28,6 +32,8 @@ header {
     background: #f8f8f8;
     box-shadow: 0 0 10px #ccc;
     -webkit-transition: all 5s ease;
+    -moz-transition: all 5s ease;
+    -o-transition: all 5s ease;
     transition: all 5s ease;
 }
 #logo {
@@ -39,6 +45,8 @@ header img {
     height: 60px;
     border-radius: 30px;
     -webkit-transition: box-shadow 0.5s;
+    -moz-transition: box-shadow 0.5s;
+    -o-transition: box-shadow 0.5s;
     transition: box-shadow 0.5s;
 }
 header img:hover {
@@ -89,6 +97,8 @@ nav li a:after {
     background: #1FAEFF;
     opacity: 0;
     -webkit-transition: .2s ease-in;
+    -moz-transition: .2s ease-in;
+    -o-transition: .2s ease-in;
     transition: .2s ease-in;
 }
 nav li a:hover {
@@ -127,7 +137,7 @@ nav {
     min-height: 600px;
     height:100%;
     width:100%;
-    margin-top:77px;
+    margin-top:0px;
     margin-bottom:40px;
 }
 #pages{
@@ -212,7 +222,8 @@ footer{
     background-color:#f8f8f8;
     border-top:1px solid #ccc;
     box-shadow:10px 0 0 #ccc;
-    bottom:77px;
+    bottom:0px;
+    -moz-bottom:0px;
 }
 
 footer div{
@@ -275,6 +286,7 @@ footer div{
     height: 180px;
     border-radius: 50%;
     background-image: linear-gradient(#f9fdff, #d9eaf8);
+    background: -moz-linear-gradient(#f9fdff, #d9eaf8);
     z-index: 11;
     font-size: 20px;;
     color: #8da6b8;
@@ -454,6 +466,8 @@ footer div{
     background: #000;
     opacity: 0;
     -webkit-transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -o-transition: opacity .25s ease-in-out;
     transition: opacity .25s ease-in-out;
     cursor: pointer;
 }
@@ -477,10 +491,14 @@ footer div{
     height: 20px;
     background: url(../image/skill_flag.png);
     -webkit-transition-duration: 1s;
+    -moz-transition-duration: 1s;
+    -o-transition-duration: 1s;
     transition-duration: 1s;
 }
 .skill_flag_scale {
     -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
     transform: rotate(180deg);
 }
 .skill_int {
@@ -903,9 +921,10 @@ footer div{
     line-height: 33px;
     font-size: 19px;
     background: #ffffff;
-    background: -moz-linear-gradient(top, #ffffff 1%, #eaeaea 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#ffffff), color-stop(100%,#eaeaea));
     background: -webkit-linear-gradient(top, #ffffff 1%,#eaeaea 100%);
+    background: -moz-gradient(linear, left top, left bottom, color-stop(1%,#ffffff), color-stop(100%,#eaeaea));
+    background: -moz-linear-gradient(top, #ffffff 1%, #eaeaea 100%);
     background: -o-linear-gradient(top, #ffffff 1%,#eaeaea 100%);
     background: -ms-linear-gradient(top, #ffffff 1%,#eaeaea 100%);
     background: linear-gradient(top, #ffffff 1%,#eaeaea 100%);
@@ -955,6 +974,8 @@ footer div{
     text-shadow: 1px 1px 1px rgba(255,255,255,0.8);
     display: list-item;
     text-align: -webkit-match-parent;
+    text-align: -moz-match-parent;
+    text-align: -o-match-parent;
 }
 .ac-container input:checked ~ article{
     -webkit-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
@@ -991,11 +1012,22 @@ footer div{
   50% { background-color: #91bd09; -webkit-box-shadow: 0 0 50px #91bd09; }
   to { background-color: #749a02; -webkit-box-shadow: 0 0 25px #333; }
 }
+@-moz-keyframes bigAssButtonPulse {
+  from { background-color: #749a02; -moz-box-shadow: 0 0 25px #333; }
+  50% { background-color: #91bd09; -moz-box-shadow: 0 0 50px #91bd09; }
+  to { background-color: #749a02; -moz-box-shadow: 0 0 25px #333; }
+}
+
 
 @-webkit-keyframes greenPulse {
   from { background-color: #749a02; -webkit-box-shadow: 0 0 9px #333; }
   50% { background-color: #91bd09; -webkit-box-shadow: 0 0 18px #91bd09; }
   to { background-color: #749a02; -webkit-box-shadow: 0 0 9px #333; }
+}
+@-moz-keyframes greenPulse {
+  from { background-color: #749a02; -moz-box-shadow: 0 0 9px #333; }
+  50% { background-color: #91bd09; -moz-box-shadow: 0 0 18px #91bd09; }
+  to { background-color: #749a02; -moz-box-shadow: 0 0 9px #333; }
 }
 
 @-webkit-keyframes bluePulse {
@@ -1003,11 +1035,21 @@ footer div{
   50% { background-color: #2daebf; -webkit-box-shadow: 0 0 18px #2daebf; }
   to { background-color: #007d9a; -webkit-box-shadow: 0 0 9px #333; }
 }
+@-moz-keyframes bluePulse {
+  from { background-color: #007d9a; -moz-box-shadow: 0 0 9px #333; }
+  50% { background-color: #2daebf; -moz-box-shadow: 0 0 18px #2daebf; }
+  to { background-color: #007d9a; -moz-box-shadow: 0 0 9px #333; }
+}
 
 @-webkit-keyframes redPulse {
   from { background-color: #bc330d; -webkit-box-shadow: 0 0 9px #333; }
   50% { background-color: #e33100; -webkit-box-shadow: 0 0 18px #e33100; }
   to { background-color: #bc330d; -webkit-box-shadow: 0 0 9px #333; }
+}
+@-moz-keyframes redPulse {
+  from { background-color: #bc330d; -moz-box-shadow: 0 0 9px #333; }
+  50% { background-color: #e33100; -moz-box-shadow: 0 0 18px #e33100; }
+  to { background-color: #bc330d; -moz-box-shadow: 0 0 9px #333; }
 }
 
 @-webkit-keyframes magentaPulse {
@@ -1015,11 +1057,21 @@ footer div{
   50% { background-color: #a9014b; -webkit-box-shadow: 0 0 18px #a9014b; }
   to { background-color: #630030; -webkit-box-shadow: 0 0 9px #333; }
 }
+@-moz-keyframes magentaPulse {
+  from { background-color: #630030; -moz-box-shadow: 0 0 9px #333; }
+  50% { background-color: #a9014b; -moz-box-shadow: 0 0 18px #a9014b; }
+  to { background-color: #630030; -moz-box-shadow: 0 0 9px #333; }
+}
 
 @-webkit-keyframes orangePulse {
   from { background-color: #d45500; -webkit-box-shadow: 0 0 9px #333; }
   50% { background-color: #ff5c00; -webkit-box-shadow: 0 0 18px #ff5c00; }
   to { background-color: #d45500; -webkit-box-shadow: 0 0 9px #333; }
+}
+@-moz-keyframes orangePulse {
+  from { background-color: #d45500; -moz-box-shadow: 0 0 9px #333; }
+  50% { background-color: #ff5c00; -moz-box-shadow: 0 0 18px #ff5c00; }
+  to { background-color: #d45500; -moz-box-shadow: 0 0 9px #333; }
 }
 
 @-webkit-keyframes orangellowPulse {
@@ -1027,13 +1079,46 @@ footer div{
   50% { background-color: #ffb515; -webkit-box-shadow: 0 0 18px #ffb515; }
   to { background-color: #fc9200; -webkit-box-shadow: 0 0 9px #333; }
 }
+@-moz-keyframes orangellowPulse {
+  from { background-color: #fc9200; -moz-box-shadow: 0 0 9px #333; }
+  50% { background-color: #ffb515; -moz-box-shadow: 0 0 18px #ffb515; }
+  to { background-color: #fc9200; -moz-box-shadow: 0 0 9px #333; }
+}
 
-.green.button { -webkit-animation-name: greenPulse; -webkit-animation-duration: 3s;-webkit-animation-iteration-count: infinite; }
-.blue.button { -webkit-animation-name: bluePulse; -webkit-animation-duration: 4s;-webkit-animation-iteration-count: infinite; }
-.red.button { -webkit-animation-name: redPulse; -webkit-animation-duration: 1s;-webkit-animation-iteration-count: infinite; }
-.magenta.button { -webkit-animation-name: magentaPulse; -webkit-animation-duration: 2s;-webkit-animation-iteration-count: infinite; }
-.orange.button { -webkit-animation-name: orangePulse; -webkit-animation-duration: 3s;-webkit-animation-iteration-count: infinite; }
-.orangellow.button { -webkit-animation-name: orangellowPulse; -webkit-animation-duration: 5s;-webkit-animation-iteration-count: infinite; }
+
+
+.green.button{
+    background-color: #749a02;
+}
+.blue.button{
+    background-color: #007d9a;
+}
+.red.button{
+    background-color: #bc330d;
+}
+.magenta.button{
+    background-color: #630030;
+}
+.orange.button{
+    background-color: #d45500;
+}
+.orangellow.button{
+    background-color: #fc9200;
+}
+
+.green.button { -webkit-animation-name: greenPulse; -webkit-animation-duration: 3s;-webkit-animation-iteration-count: infinite;
+                -moz-animation-name: greenPulse; -moz-animation-duration: 3s;-moz-animation-iteration-count: infinite; }
+.blue.button { -webkit-animation-name: bluePulse; -webkit-animation-duration: 4s;-webkit-animation-iteration-count: infinite; 
+               -moz-animation-name: bluePulse; -moz-animation-duration: 4s;-moz-animation-iteration-count: infinite;}
+.red.button { -webkit-animation-name: redPulse; -webkit-animation-duration: 1s;-webkit-animation-iteration-count: infinite; 
+              -moz-animation-name: redPulse; -moz-animation-duration: 1s;-moz-animation-iteration-count: infinite;}
+.magenta.button { -webkit-animation-name: magentaPulse; -webkit-animation-duration: 2s;-webkit-animation-iteration-count: infinite; 
+                  -moz-animation-name: magentaPulse; -moz-animation-duration: 2s;-moz-animation-iteration-count: infinite;}
+.orange.button { -webkit-animation-name: orangePulse; -webkit-animation-duration: 3s;-webkit-animation-iteration-count: infinite; 
+                 -moz-animation-name: orangePulse; -moz-animation-duration: 3s;-moz-animation-iteration-count: infinite;}
+.orangellow.button { -webkit-animation-name: orangellowPulse; -webkit-animation-duration: 5s;-webkit-animation-iteration-count: infinite;
+                     -moz-animation-name: orangellowPulse; -moz-animation-duration: 5s;-moz-animation-iteration-count: infinite; }
+
 
 .page6 div{
     display: block;
