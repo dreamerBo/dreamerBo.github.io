@@ -307,7 +307,7 @@ footer div{
 .hour3 {
     right: 5px;
     top: 50%;
-    margin-top: -7px;
+    margin-top: -11px;
 
 }
 
@@ -321,7 +321,7 @@ footer div{
 .hour9 {
     left: 5px;
     top: 50%;
-    margin-top: -7px;
+    margin-top: -11px;
 
 }
 
@@ -390,7 +390,7 @@ footer div{
 #point{ 
     position: absolute; 
     left:50%; top: 50%; 
-    width: 16px; height:16px; 
+    width: 0px; height:16px; 
     margin-left: -8px; 
     margin-top: -8px; 
     z-index: 999;    b
