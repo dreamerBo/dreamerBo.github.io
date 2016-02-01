@@ -78,14 +78,195 @@
 
 
 	section{width:1240px;text-align: center;position: relative; left:50%; margin-left:-620px;margin-bottom:20px;}
+	
+	#wrap-left{width:120px;float:left;}
+	#wrap-right{width:1110px;float:right;}
+
+	.topmenu
+        {
+            display: block;
+            width: 120px;
+            border: 2px solid #3399ff;
+            margin: 0;
+            padding: 0;
+        }
+        .toptitle
+        {
+            height: 40px;
+            line-height: 40px;
+            text-align: left;
+            font-size: 11pt;
+            font-weight: bold;
+            color: White;
+            background: #3399ff;
+            padding-left: 20px;
+        }
+        .topmenu li
+        {
+            height: 30px;
+            line-height: 30px;
+            font-size: 11pt;
+            list-style-type: none;
+            text-align: left;
+            padding-left: 8px;
+            z-index: 3;
+            background-repeat: no-repeat;
+            background-position: right;
+        }
+        .topmenu li a
+        {
+            text-decoration: none;
+            color: #313131;
+        }
+        .topmenu li a:hover
+        {
+            text-decoration: underline;
+            font-weight: bold;
+            color: #3399ff;
+        }
+        .topmenu .lihover 
+        {
+            border: 1px solid #DDD;
+            border-right: 0;
+            box-shadow: 0 0 8px #DDD;
+            -moz-box-shadow: 0 0 8px #DDD;
+            -webkit-box-shadow: 0 0 8px #DDD;
+            background-image: none;
+            height:60px;
+            border-left:4px solid #3399ff;
+        }
+         .topmenu .lihover .submenu 
+        {
+            display: block;
+        }
+        
+        .topmenu .lihover span 
+        {
+            background: white;
+            display: inline-block;
+            z-index: 20;
+            width: 20px;
+            height: 60px;
+            float: right;
+            position: relative;
+            
+        }
+        
+        .topmenu .lihover b
+        {
+            display:block;
+            height:30px;
+            line-height:30px;
+            font-weight:normal;
+            font-size:10pt;
+            }
+        .submenu
+        {
+            display: none;
+            width: 500px;
+            left: 120px;
+            position: absolute;
+            top: 40px;
+            border: 1px solid #DDD;
+            z-index: 4;
+            background: white;
+            box-shadow: 0 0 8px #DDD;
+            -moz-box-shadow: 0 0 8px #DDD;
+            -webkit-box-shadow: 0 0 8px #DDD;
+        }
+        .leftdiv
+        {
+            float: left;
+            width: 490px;
+            margin: 5px;
+        }
+        .rightdiv
+        {
+            float: left;
+            width: 10px;
+            margin: 5px;
+        }
+       
+        .leftdiv dl
+        {
+            display: block;
+            border-bottom: 1px solid #EEE;
+            padding-bottom: 6px;
+            overflow: hidden;
+        }
+        .leftdiv dl dt
+        {
+            display: block;
+            float: left;
+            width: 100px;
+            text-align: right;
+            height: 22px;
+            line-height: 22px;
+            padding-right: 6px;
+        }
+        
+        .leftdiv dl dt a
+        {
+            color: #3399ff;
+            font-weight: bold;
+            text-decoration: underline;
+            font-size: 10pt;
+        }
+        .leftdiv dl dd
+        {
+            display: block;
+            overflow: hidden;
+        }
+        .leftdiv dl dd a
+        {
+            display: block;
+            float: left;
+            border-left: 1px solid #CCC;
+            color: #737373;
+            font-size: 9pt;
+            padding: 0 8px;
+            height: 14px;
+            line-height: 14px;
+            margin: 4px 0;
+        }
+        
+        .rightdiv dl dd
+        {
+            margin: 3px 0;
+        }
+        
+        .rightdiv dl dt
+        {
+            color: #3399ff;
+            font-weight: bold;
+            font-size: 10pt;
+        }
+        
+        .rightdiv dl dd a
+        {
+            font-size: 9pt;
+            color: #737373;
+            line-height: 22px;
+        }
+        .rightdiv dl dd a:hover
+        {
+            color: #737373;
+            font-weight: normal;
+        }
+        
+        .topmenu li b
+        {
+            display:none;
+        }
+
 	section .section-title img, section .section-title h2{
 		float:left;padding-right:10px;
 	}	
 	section div{
-		clear: both;
+/*		clear: both;*/
 	}
 	section .section-title{
-		width:1240px;
+		width:1106px;
 		height:55px;
 /*		background-color: rgb(0, 127, 255);*/
 		background: -webkit-linear-gradient(to left, blue, white);
@@ -145,59 +326,312 @@
 		</div>		
 	</header>
 	<section>
-		<img src="./images/banner1.png">
-		<div class="section-title">
-			<img src="./images/logo_header.png">
-			<h2>Description</h2>
+	<script type="text/javascript">
+        window.onload = function () {
+        	var topmenu = document.getElementById("topmenu");
+            var Lis = topmenu.getElementsByTagName("li");
+            for (i = 0; i < Lis.length; i++) {
+                Lis[i].onmouseover = function () {
+                    this.className = "lihover";
+                }
+
+                Lis[i].onmouseout = function () {
+                    this.className = "";
+                }
+            }
+
+        }
+    </script>
+		<div id="wrap-left">
+			<ul class="topmenu" id="topmenu">
+	        <div class="toptitle">
+	            Categories
+	        </div>
+	        <li><a href="#">Cables</a>
+	            <div class="submenu">
+	                <div class="leftdiv">
+	                	<dl>
+	                        <dt><a href="#">Cat6</a></dt>
+	                        <dd>
+	                            <a href="#">1M</a> <a href="#">2M</a> <a href="#">3M</a> <a href="#">5M</a>
+	                            <a href="#">10M</a> <a href="#">20M</a> <a href="#">30M</a> <a href="#">50M</a> 
+	                        </dd>
+	                    </dl>
+	                    <dl>
+	                        <dt><a href="#">HDMI</a></dt>
+	                        <dd>
+	                            <a href="#">1M</a> <a href="#">2M</a> <a href="#">3M</a> <a href="#">5M</a>
+	                            <a href="#">10M</a> 
+	                        </dd>
+	                    </dl>
+	                    <dl>
+	                        <dt><a href="#">DVI</a></dt>
+	                        <dd>
+	                            <a href="#">1M</a> <a href="#">2M</a> <a href="#">3M</a> <a href="#">5M</a>
+	                            <a href="#">10M</a> 
+	                        </dd>
+	                    </dl>
+	                    <dl>
+	                        <dt><a href="#">VGA</a></dt>
+	                        <dd>
+	                            <a href="#">1M</a> <a href="#">2M</a> <a href="#">3M</a> <a href="#">5M</a>
+	                        </dd>
+	                    </dl>
+	                    <dl>
+	                        <dt><a href="#">DISPLAYPORT</a></dt>
+	                        <dd>
+	                            <a href="#">1M</a> <a href="#">2M</a> <a href="#">3M</a> <a href="#">5M</a> <a
+	                                href="#">10M</a>
+	                        </dd>
+	                    </dl>
+	                </div>
+	                <div class="rightdiv">
+	                    
+	                </div>
+	            </div>
+	        </li>
+	        <li><a href="#">Adaptors</a> <span></span>
+	            <div class="submenu">
+	                <div class="leftdiv">
+	                    <dl>
+	                        <dt><a href="#">111111</a></dt>
+	                        <dd>
+	                            <a href="#">222222</a><a href="#">222222</a><a href="#">222222</a><a href="#">222222</a><a href="#">222222</a>
+	                        </dd>
+	                    </dl>
+	                    <dl>
+	                        <dt><a href="#">111111</a></dt>
+	                        <dd>
+	                            <a href="#">222222</a><a href="#">222222</a><a href="#">222222</a><a href="#">222222</a>
+	                        </dd>
+	                    </dl>
+	                    <dl>
+	                        <dt><a href="#">111111</a></dt>
+	                        <dd>
+	                            <a href="#">222222</a><a href="#">222222</a><a href="#">222222</a><a href="#">222222</a>
+	                        </dd>
+	                    </dl>
+	                    <dl>
+	                        <dt><a href="#">111111</a></dt>
+	                        <dd>
+	                            <a href="#">222222</a><a href="#">222222</a>
+	                        </dd>
+	                    </dl>
+	                </div>
+	                <div class="rightdiv">
+	                </div>
+	            </div>
+	        </li>
+	        <li><a href="#">Enclosures</a><span></span>
+	            <div class="submenu">
+	                <div class="leftdiv">
+	                    <dl>
+	                        <dt><a href="#">111111</a></dt>
+	                        <dd>
+	                            <a href="#">222222</a><a href="#">222222</a>
+	                        </dd>
+	                    </dl>
+	                    <dl>
+	                        <dt><a href="#">111111</a></dt>
+	                        <dd>
+	                            <a href="#">222222</a><a href="#">222222</a><a href="#">222222</a><a href="#">222222</a>
+	                        </dd>
+	                    </dl>
+	                    <dl>
+	                        <dt><a href="#">111111</a></dt>
+	                        <dd>
+	                            <a href="#">222222</a><a href="#">222222</a><a href="#">222222</a><a href="#">222222</a><a href="#">222222</a>
+	                        </dd>
+	                    </dl>
+	                    <dl>
+	                        <dt><a href="#">111111</a></dt>
+	                        <dd>
+	                            <a href="#">222222</a><a href="#">222222</a><a href="#">222222</a><a href="#">222222</a><a href="#">222222</a><a href="#">222222</a>
+	                            <a href="#">222222</a>
+	                        </dd>
+	                    </dl>
+	                </div>
+	                <div class="rightdiv">
+	                </div>
+	            </div>
+	        </li>
+	        <li><a href="#">Mice</a><span></span>
+	            <div class="submenu">
+	                <div class="leftdiv">
+	                    <dl>
+	                        <dt><a href="#">111111</a></dt>
+	                        <dd>
+	                            <a href="#">222222</a><a href="#">222222</a><a href="#">222222</a><a href="#">222222</a>
+	                        </dd>
+	                    </dl>
+	                    <dl>
+	                        <dt><a href="#">111111</a></dt>
+	                        <dd>
+	                            <a href="#">222222</a><a href="#">222222</a><a href="#">222222</a><a href="#">222222</a><a href="#">222222</a>
+	                        </dd>
+	                    </dl>
+	                    <dl>
+	                        <dt><a href="#">111111</a></dt>
+	                        <dd>
+	                            <a href="#">222222</a><a href="#">222222</a>
+	                        </dd>
+	                    </dl>
+	                    <dl>
+	                        <dt><a href="#">111111</a></dt>
+	                        <dd>
+	                            <a href="#">222222</a><a href="#">222222</a>
+	                        </dd>
+	                    </dl>
+	                    <dl>
+	                        <dt><a href="#">111111</a></dt>
+	                        <dd>
+	                            <a href="#">222222</a>
+	                        </dd>
+	                    </dl>
+	                </div>
+	                <div class="rightdiv">
+	                </div>
+	            </div>
+	        </li>
+	        <li><a href="#">RAMs</a><span></span>
+	            <div class="submenu">
+	                <div class="leftdiv">
+	                    <dl>
+	                        <dt><a href="#">111111</a></dt>
+	                        <dd>
+	                            <a href="#">222222</a><a href="#">222222</a><a href="#">222222</a><a href="#">222222</a>
+	                        </dd>
+	                    </dl>
+	                    <dl>
+	                        <dt><a href="#">111111</a></dt>
+	                        <dd>
+	                            <a href="#">222222</a><a href="#">222222</a><a href="#">222222</a><a href="#">222222</a><a href="#">222222</a>
+	                        </dd>
+	                    </dl>
+	                    <dl>
+	                        <dt><a href="#">111111</a></dt>
+	                        <dd>
+	                            <a href="#">222222</a><a href="#">222222</a><a href="#">222222</a>
+	                        </dd>
+	                    </dl>
+	                    <dl>
+	                        <dt><a href="#">111111</a></dt>
+	                        <dd>
+	                            <a href="#">222222</a><a href="#">222222</a><a href="#">222222</a><a href="#">222222</a><a href="#">222222</a>
+	                            <a href="#">222222</a><a href="#">222222</a><a href="#">222222</a><a href="#">222222</a>
+	                        </dd>
+	                    </dl>
+	                    <dl>
+	                        <dt><a href="#">111111</a></dt>
+	                        <dd>
+	                            <a href="#">222222</a><a href="#">222222</a><a href="#">222222</a>
+	                        </dd>
+	                    </dl>
+	                    <dl>
+	                        <dt><a href="#">111111</a></dt>
+	                        <dd>
+	                            <a href="#">222222</a><a href="#">222222</a><a href="#">222222</a><a href="#">222222</a><a href="#">222222</a>
+	                            <a href="#">222222</a><a href="#">222222</a><a href="#">222222</a><a href="#">222222</a><a href="#">222222</a>
+	                            <a href="#">222222</a><a href="#">222222</a><a href="#">222222</a>
+	                        </dd>
+	                    </dl>
+	                </div>
+	                <div class="rightdiv">
+	                </div>
+	            </div>
+	        </li>
+	        <li><a href="#">Others</a><span></span>
+	            <div class="submenu">
+	                <div class="leftdiv">
+	                    <dl>
+	                        <dt><a href="#">111111</a></dt>
+	                        <dd>
+	                            <a href="#">222222</a><a href="#">222222</a><a href="#">222222</a><a href="#">222222</a>
+	                        </dd>
+	                    </dl>
+	                    <dl>
+	                        <dt><a href="#">111111</a></dt>
+	                        <dd>
+	                            <a href="#">222222</a><a href="#">222222</a><a href="#">222222</a><a href="#">222222</a><a href="#">222222</a>
+	                            <a href="#">222222</a><a href="#">222222</a><a href="#">222222</a>
+	                        </dd>
+	                    </dl>
+	                    <dl>
+	                        <dt><a href="#">111111</a></dt>
+	                        <dd>
+	                            <a href="#">222222</a><a href="#">222222</a><a href="#">222222</a><a href="#">222222</a>
+	                        </dd>
+	                    </dl>
+	                    <dl>
+	                        <dt><a href="#">111111</a></dt>
+	                        <dd>
+	                            <a href="#">222222</a><a href="#">222222</a>
+	                        </dd>
+	                    </dl>
+	                </div>
+	                <div class="rightdiv">
+	                </div>
+	            </div>
+	        </li>
+    	</ul>
 		</div>
-		<div class="section-content">
-			<img src="./images/image_G502.jpg">	
+		<div id="wrap-right">
+			<img src="./images/banner1.png">
+			<div class="section-title">
+				<img src="./images/logo_header.png">
+				<h2>Description</h2>
+			</div>
+			<div class="section-content">
+				<img src="./images/image_G502.jpg">	
+			</div>
+			<div class="section-title">
+				<img src="./images/logo_header.png">
+				<h2>Delivery & Shipping</h2>
+			</div>
+			<div class="section-content">
+				<p>We endeavour to despatch all orders within 3 busines days of verifying your payment.
+				We generally use Australia Post eParcel for shipping,
+				but may use Australia Post standard mail service for certain items.</p>
+				<p>Please refer to the product listing for details.We ship to address provided in eBay. Please make sure your shipping details
+				in your eBay account are correct as we cannot guarantee that it can be changed. This is because we use an automated order processing system,
+				so all orders will go through to our warehouse for packing once payment has been verified.</p><p><br></p><ul>
+				<ul>
+				<p>*Delivery delays can occur for a variety of reasons.
+				Please allow an additional 3 business days after the expected delivery time
+				before contacting us to follow up with our delivery company.
+				We recommend purchasing postal insurance for your parcel,
+				this will cover you for any loss or damage in transit.
+				Please select "with tracking and signature" postal service during checkout,
+				for your parcel to be covered by postal insurance.</p>
+				<p>*We do not take responsiblity for damaged or lost parcels
+				if no insurance cover was purchased for that item.</p>
+				<p>*We do not offer pick up as an option.
+				We do not have a storefront, showroom or units on display.</p>
+				<p>*We ship within Australia only.</p>
+				<p>*No express service is available.</p>
+				</ul></ul>
+			</div>
+			<div class="section-title">
+				<img src="./images/logo_header.png">
+				<h2>Return & Refund</h2>
+			</div>
+			<div class="section-content">
+				<ul>
+					<li>Refund or replacement request is available only the requests within 1 week after parcel received &amp; returning the item as the same condition as received.</li>
+					<li>Please contact us to request a return authorization. Your name, auction number, and reason for return should be included in the email.&nbsp;
+					All items returned must contain all original packaging materials.</li>
+					<li>Please repack the item carefully. Items returned will be tested and a new replacement will be shipped to the buyer immediately when found defective.</li>
+					<li>In the event that a suitable replacement is not available then a refund will be issued. Shipping, handling and insurance fees are non refundable.</li>
+					<li>If the item is found non-defective, the item will be sent back to the buyer at buyer's expense.&nbsp;
+					Items returned without RMA number will be refused and returned to the sender. </li>
+					<li>Buyer is responsible for All Return Postage and Shipping Charges.</li>
+					<li>Buyer is responsible for additional shipping costs for items that are returned refused and/or undeliverable.&nbsp;
+					We do not accept any returns without an authorization number on the box or label it is being returned in.</li>
+				</ul>	
+			</div>	
 		</div>
-		<div class="section-title">
-			<img src="./images/logo_header.png">
-			<h2>Delivery & Shipping</h2>
-		</div>
-		<div class="section-content">
-			<p>We endeavour to despatch all orders within 3 busines days of verifying your payment.
-			We generally use Australia Post eParcel for shipping,
-			but may use Australia Post standard mail service for certain items.</p>
-			<p>Please refer to the product listing for details.We ship to address provided in eBay. Please make sure your shipping details
-			in your eBay account are correct as we cannot guarantee that it can be changed. This is because we use an automated order processing system,
-			so all orders will go through to our warehouse for packing once payment has been verified.</p><p><br></p><ul>
-			<ul>
-			<p>*Delivery delays can occur for a variety of reasons.
-			Please allow an additional 3 business days after the expected delivery time
-			before contacting us to follow up with our delivery company.
-			We recommend purchasing postal insurance for your parcel,
-			this will cover you for any loss or damage in transit.
-			Please select "with tracking and signature" postal service during checkout,
-			for your parcel to be covered by postal insurance.</p>
-			<p>*We do not take responsiblity for damaged or lost parcels
-			if no insurance cover was purchased for that item.</p>
-			<p>*We do not offer pick up as an option.
-			We do not have a storefront, showroom or units on display.</p>
-			<p>*We ship within Australia only.</p>
-			<p>*No express service is available.</p>
-			</ul></ul>
-		</div>
-		<div class="section-title">
-			<img src="./images/logo_header.png">
-			<h2>Return & Refund</h2>
-		</div>
-		<div class="section-content">
-			<ul>
-				<li>Refund or replacement request is available only the requests within 1 week after parcel received &amp; returning the item as the same condition as received.</li>
-				<li>Please contact us to request a return authorization. Your name, auction number, and reason for return should be included in the email.&nbsp;
-				All items returned must contain all original packaging materials.</li>
-				<li>Please repack the item carefully. Items returned will be tested and a new replacement will be shipped to the buyer immediately when found defective.</li>
-				<li>In the event that a suitable replacement is not available then a refund will be issued. Shipping, handling and insurance fees are non refundable.</li>
-				<li>If the item is found non-defective, the item will be sent back to the buyer at buyer's expense.&nbsp;
-				Items returned without RMA number will be refused and returned to the sender. </li>
-				<li>Buyer is responsible for All Return Postage and Shipping Charges.</li>
-				<li>Buyer is responsible for additional shipping costs for items that are returned refused and/or undeliverable.&nbsp;
-				We do not accept any returns without an authorization number on the box or label it is being returned in.</li>
-			</ul>	
-		</div>
+
+		
 
 		
 
