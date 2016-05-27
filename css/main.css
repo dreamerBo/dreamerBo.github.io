@@ -710,7 +710,7 @@ footer div{
     position: relative;
 }
 #HTML5::before{
-    content: '35%';
+    content: '75%';
     position: absolute;
     top: 0;
     left: 0;
@@ -736,7 +736,7 @@ footer div{
     position: relative;
 }
 #CSS3::before{
-    content: '40%';
+    content: '75%';
     position: absolute;
     top: 0;
     left: 0;
